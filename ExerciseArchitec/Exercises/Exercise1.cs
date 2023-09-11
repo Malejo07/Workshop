@@ -339,7 +339,36 @@ namespace ExcerciseArchitec
 
 
     // Average of Four: Pide al usuario cuatro números y muestra el promedio.
-    // public class Excercise11{
+     public class Excercise11{
+        public void Exe(){
+            Console.Write("Por favor, ingresa el primer número: ");
+        string numero1Input = Console.ReadLine();
 
-    // }
+        Console.Write("Ingresa el segundo número: ");
+        string numero2Input = Console.ReadLine();
+
+        Console.Write("Ingresa el tercer número: ");
+        string numero3Input = Console.ReadLine();
+
+        Console.Write("Ingresa el cuarto número: ");
+        string numero4Input = Console.ReadLine();
+
+        // Intenta convertir las entradas del usuario en números enteros
+        if (int.TryParse(numero1Input, out int numero1) &&
+            int.TryParse(numero2Input, out int numero2) &&
+            int.TryParse(numero3Input, out int numero3) &&
+            int.TryParse(numero4Input, out int numero4))
+        {
+            // Calcula el promedio
+            double promedio = (numero1 + numero2 + numero3 + numero4) / 4.0;
+
+            Console.WriteLine($"El promedio de los números ingresados es: {promedio}");
+        }
+        else
+        {
+            Console.WriteLine("Al menos una de las entradas no es un número válido.");
+        }
+        }
+
+     }
 }
