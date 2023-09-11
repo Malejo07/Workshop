@@ -464,7 +464,7 @@ namespace ExcerciseArchitec
             {
                 if (numero >= 10 && numero <= 20)
                 {
-                    Console.WriteLine($"El número {numero} está en el rango de 10 a 20 (inclusive).");
+                    Console.WriteLine($"El número {numero} está en el rango de 10 a 20.");
                 }
                 else
                 {
