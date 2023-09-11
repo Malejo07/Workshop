@@ -34,6 +34,54 @@
                             var Excercise3 = new Excercise3();
                             Excercise3.Exe();
                             break;
+                        case 4:
+                            var Excercise4 = new Excercise4();
+                            Excercise4.Exe();
+                            break;
+                        case 5:
+                            var Excercise5 = new Excercise5();
+                            Excercise5.Exe();
+                            break;
+                        case 6:
+                            var Excercise6 = new Excercise6();
+                            Excercise6.Exe();
+                            break;
+                        case 7:
+                            var Excercise7 = new Excercise7();
+                            Excercise7.Exe();
+                            break;
+                        case 8:
+                            var Excercise8 = new Excercise8();
+                            Excercise8.Exe();
+                            break;
+                        case 9:
+                            var Excercise9 = new Excercise9();
+                            Excercise9.Exe();
+                            break;
+                        case 10:
+                            var Excercise10 = new Excercise10();
+                            Excercise10.Exe();
+                            break;
+                        case 11:
+                            var Excercise11 = new Excercise11();
+                            Excercise11.Exe();
+                            break;
+                        case 12:
+                            var Excercise12 = new Excercise12();
+                            Excercise12.Exe();
+                            break;
+                        // case 13:
+                        //     var Excercise13 = new Excercise13();
+                        //     Excercise13.Exe();
+                        //     break;
+                        case 14:
+                            var Excercise14 = new Excercise14();
+                            Excercise14.Exe();
+                            break;
+                        case 15:
+                            var Excercise15 = new Excercise15();
+                            Excercise15.Exe();
+                            break;
                         default:
                             Console.WriteLine("Presione una tecla para continuar...");
                             Console.ReadKey();
@@ -51,4 +99,5 @@
             Console.WriteLine("¡Hasta pronto!");
         }
     }
+
 }

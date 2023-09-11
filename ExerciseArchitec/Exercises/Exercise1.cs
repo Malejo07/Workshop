@@ -339,36 +339,142 @@ namespace ExcerciseArchitec
 
 
     // Average of Four: Pide al usuario cuatro números y muestra el promedio.
-     public class Excercise11{
-        public void Exe(){
+    public class Excercise11
+    {
+        public void Exe()
+        {
             Console.Write("Por favor, ingresa el primer número: ");
-        string numero1Input = Console.ReadLine();
+            string numero1Input = Console.ReadLine();
 
-        Console.Write("Ingresa el segundo número: ");
-        string numero2Input = Console.ReadLine();
+            Console.Write("Ingresa el segundo número: ");
+            string numero2Input = Console.ReadLine();
 
-        Console.Write("Ingresa el tercer número: ");
-        string numero3Input = Console.ReadLine();
+            Console.Write("Ingresa el tercer número: ");
+            string numero3Input = Console.ReadLine();
 
-        Console.Write("Ingresa el cuarto número: ");
-        string numero4Input = Console.ReadLine();
+            Console.Write("Ingresa el cuarto número: ");
+            string numero4Input = Console.ReadLine();
 
-        // Intenta convertir las entradas del usuario en números enteros
-        if (int.TryParse(numero1Input, out int numero1) &&
-            int.TryParse(numero2Input, out int numero2) &&
-            int.TryParse(numero3Input, out int numero3) &&
-            int.TryParse(numero4Input, out int numero4))
+            // Intenta convertir las entradas del usuario en números enteros
+            if (int.TryParse(numero1Input, out int numero1) &&
+                int.TryParse(numero2Input, out int numero2) &&
+                int.TryParse(numero3Input, out int numero3) &&
+                int.TryParse(numero4Input, out int numero4))
+            {
+                // Calcula el promedio
+                double promedio = (numero1 + numero2 + numero3 + numero4) / 4.0;
+
+                Console.WriteLine($"El promedio de los números ingresados es: {promedio}");
+            }
+            else
+            {
+                Console.WriteLine("Al menos una de las entradas no es un número válido.");
+            }
+        }
+
+    }
+
+
+    //  Smallest of Fiven: Pide al usuario cinco números y muestra el más pequeño.
+    public class Excercise12
+    {
+        public void Exe()
         {
-            // Calcula el promedio
-            double promedio = (numero1 + numero2 + numero3 + numero4) / 4.0;
+            int cantidadNumeros = 5;
+            int numeroMinimo = int.MaxValue; // Inicializamos con un valor muy grande
 
-            Console.WriteLine($"El promedio de los números ingresados es: {promedio}");
+            for (int i = 1; i <= cantidadNumeros; i++)
+            {
+                Console.Write($"Ingresa el número {i}: ");
+                string numeroInput = Console.ReadLine();
+
+                if (int.TryParse(numeroInput, out int numero))
+                {
+                    // Comparamos con el número mínimo actual y actualizamos si es menor
+                    if (numero < numeroMinimo)
+                    {
+                        numeroMinimo = numero;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Al menos una de las entradas no es un número válido.");
+                    return; // Salimos del programa si una entrada no es válida
+                }
+            }
+
+            Console.WriteLine($"El número más pequeño de los cinco ingresados es: {numeroMinimo}");
         }
-        else
+    }
+
+
+    //     Vowel Counter: Pide una palabra al usuario y devuelve el número de vocales en 
+    // esa palabra. 
+    // public class Excercise13{
+    //     public void Exe(){
+
+    //     }
+    // }
+
+    //Factorial Finder: Pide un número al usuario y devuelve el factorial de ese número.
+    public class Excercise14
+    {
+        public void Exe()
         {
-            Console.WriteLine("Al menos una de las entradas no es un número válido.");
-        }
-        }
+            Console.Write("Por favor, ingresa un número entero positivo: ");
+            string texInput = Console.ReadLine();
 
-     }
+            if (int.TryParse(texInput, out int numero) && numero >= 0)
+            {
+                long factorial = CalcularFactorial(numero);
+
+                Console.WriteLine($"El factorial de {numero} es: {factorial}");
+            }
+            else
+            {
+                Console.WriteLine("Debes ingresar un número entero positivo válido.");
+            }
+        }
+        static long CalcularFactorial(int numero)
+        {
+            if (numero == 0)
+            {
+                return 1; // El factorial de 0 es 1 por definición
+            }
+            long factorial = 1;
+            for (int i = 1; i <= numero; i++)
+            {
+                factorial *= i;
+            }
+            return factorial;
+
+        }
+    }
+
+    // InRange Validator : Pide un número al usuario y verifica si está en el rango de 10 a 20 
+    // (ambos incluidos).
+    public class Excercise15
+    {
+        public void Exe()
+        {
+            Console.Write("Por favor, ingresa un número: ");
+            string texInput = Console.ReadLine();
+
+            if (int.TryParse(texInput, out int numero))
+            {
+                if (numero >= 10 && numero <= 20)
+                {
+                    Console.WriteLine($"El número {numero} está en el rango de 10 a 20 (inclusive).");
+                }
+                else
+                {
+                    Console.WriteLine($"El número {numero} NO está en el rango de 10 a 20.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("La entrada no es un número válido.");
+            }
+        }
+    }
 }
