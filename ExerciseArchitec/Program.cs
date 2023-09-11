@@ -13,6 +13,7 @@
             Menu.MostrarMenu();
             while (true)
             {
+                
                 string entrada = Console.ReadLine().ToLower();
                 if (entrada == "q" || entrada == "exit")
                 {
